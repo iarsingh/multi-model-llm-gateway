@@ -1,5 +1,12 @@
 # Multi-Model LLM Gateway
 
+## Overview
+
+A request gate for a multi-model LLM gateway. `POST /check` passes a request only when the model is on an allowlist and the token count is within budget, and fails it otherwise. It is the `/check`-based counterpart to a separate llm-api-gateway project. A `/v1` ops API adds workspaces, tenant isolation, job approval and audit records.
+
+- **Built with:** Python, pytest, GitHub Actions
+- **Scope:** Local laptop proof with tests; it calls no hosted model and applies no production changes.
+
 <!-- project-guide:start -->
 ## Project guide
 
